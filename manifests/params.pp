@@ -1,7 +1,7 @@
 # Default parameters for flannel module
 class flannel::params {
   $ensure = 'present'
-  $service_state = true
+  $service_state = 'running'
   $service_enable = true
 
   if $::osfamily == 'Debian' {
