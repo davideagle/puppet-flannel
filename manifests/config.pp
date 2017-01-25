@@ -60,7 +60,7 @@ class flannel::config {
         Exec['reload systemctl daemon for flannel']
       }
     }
-  } else if $::osfamily == 'CoreOS' {
+  } elsif $::osfamily == 'CoreOS' {
 
     file { '/etc/sysconfig/flanneld':
       ensure  => file,
