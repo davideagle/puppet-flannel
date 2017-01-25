@@ -8,7 +8,7 @@ class flannel::params {
     $package_name = 'flanneld'
   } elsif $::osfamily == 'RedHat' {
     $package_name = 'flannel'
-  } elsif 'coreos' in $::operatingsystemrelease {
+  } elsif $::osfamily == 'CoreOS' {
     $package_name = 'flannel'
   }
   else {
